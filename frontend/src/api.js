@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // API configuration
 const API_BASE_URL = import.meta.env.PROD 
-  ? (import.meta.env.VITE_API_URL || '/api')
+  ? '/api'
   : 'http://127.0.0.1:5002';
 
 // Create axios instance with default config

@@ -851,6 +851,9 @@ def get_summary(session_id):
         logger.error(traceback.format_exc())
         return jsonify({"error": "Failed to generate summary"}), 500
 
+# For Vercel deployment
+vercel_app = app
+
 if __name__ == '__main__':
     print("\n" + "="*50)
     print("🚀 Interview Bot Backend API Starting...")
