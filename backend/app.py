@@ -552,7 +552,15 @@ def save_session_data(session_id: str, session_data: Dict) -> bool:
 
 # --- Flask App Setup ---
 app = Flask(__name__)
-CORS(app)
+
+# Configure CORS for production
+if os.getenv('FLASK_ENV') == 'production':
+    # Production CORS - specify allowed origins
+    allowed_origins = os.getenv('ALLOWED_ORIGINS', '').split(',')
+    CORS(app, origins=allowed_origins if allowed_origins != [''] else ['*'])
+else:
+    # Development CORS - allow all
+    CORS(app)
 
 # Initialize Gemini bot
 try:
@@ -862,8 +870,14 @@ if __name__ == '__main__':
     
     print(f"\n🧠 AI Provider: Google Gemini 2.0 Flash")
     print(f"💾 Database: {'Supabase' if SUPABASE_AVAILABLE else 'In-Memory Storage'}")
-    print(f"🌐 Server: http://127.0.0.1:5001")
-    print(f"🏥 Health: http://127.0.0.1:5001/health")
+    
+    # Get port from environment or default to 5001
+    port = int(os.getenv('PORT', 5001))
+    host = '0.0.0.0' if os.getenv('FLASK_ENV') == 'production' else '127.0.0.1'
+    debug = os.getenv('FLASK_ENV') != 'production'
+    
+    print(f"🌐 Server: http://{host}:{port}")
+    print(f"🏥 Health: http://{host}:{port}/health")
     print("="*50 + "\n")
     
-    app.run(debug=True, port=5001, host='127.0.0.1')
+    app.run(debug=debug, port=port, host=host)
