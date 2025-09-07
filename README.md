@@ -100,8 +100,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👨‍💻 Author
 
-**Mayank Raj**
-- Email: rjss2829singh@gmail.com
+**Karan Singh**
 - GitHub: [@karansingh012](https://github.com/karansingh012)
 
 ## 🙏 Acknowledgments
