@@ -1,0 +1,26 @@
+# Frontend files (not needed for backend deployment)
+frontend/
+frontend/**
+
+# Development files
+.git/
+.github/
+*.md
+README.md
+DEPLOYMENT_INSTRUCTIONS.md
+
+# Build scripts
+build.sh
+deploy-helper.sh
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
