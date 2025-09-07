@@ -1,6 +1,6 @@
 # QueryBox AI
 
-A full-stack AI-powered query application built with Python Flask backend and React frontend.
+QueryBox 🤖 is an AI-powered interview preparation bot that simulates technical 💻 and behavioral 💬 interviews. Users pick roles & domains, practice Q&A, and get instant feedback on clarity, correctness, and accuracy. A final summary highlights strengths, weaknesses, and resources. 🚀
 
 ## 🚀 Features
 
@@ -53,7 +53,7 @@ QueryBox/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/QueryBox.git
+   git clone https://github.com/karansingh012/QueryBox.git
    cd QueryBox
    ```
 
@@ -102,7 +102,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Mayank Raj**
 - Email: rjss2829singh@gmail.com
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@karansingh012](https://github.com/karansingh012)
 
 ## 🙏 Acknowledgments
 
