@@ -1,0 +1,30 @@
+# Node modules
+frontend/node_modules
+frontend/dist
+frontend/.env
+
+# Python cache
+backend/__pycache__
+backend/*.pyc
+backend/.env
+
+# Git
+.git
+.gitignore
+
+# Documentation
+*.md
+README.md
+DEPLOYMENT_INSTRUCTIONS.md
+
+# Build scripts
+build.sh
+deploy-helper.sh
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
