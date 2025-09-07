@@ -1,0 +1,23 @@
+[build]
+  # The directory to change to before starting a build
+  base = "frontend/"
+  
+  # Directory to publish (relative to base directory)
+  publish = "dist/"
+  
+  # The command to run your build
+  command = "npm run build"
+
+[build.environment]
+  # Set Node.js version
+  NODE_VERSION = "18"
+  
+# Environment variables for the build
+[context.production.environment]
+  VITE_API_URL = "https://queryboxai-backend-production.up.railway.app"
+
+[context.deploy-preview.environment]
+  VITE_API_URL = "https://queryboxai-backend-production.up.railway.app"
+
+[context.branch-deploy.environment]
+  VITE_API_URL = "https://queryboxai-backend-production.up.railway.app"
