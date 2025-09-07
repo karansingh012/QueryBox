@@ -1,13 +1,14 @@
+[providers]
+type = "python"
+
 [phases.setup]
-nixPkgs = ['python39', 'nodejs-18_x']
+nixPkgs = ['python39']
 
 [phases.install]
-cmds = [
-    'cd backend && pip install -r requirements.txt'
-]
+cmds = ['pip install -r requirements.txt']
 
 [phases.build]
-cmds = ['echo "Build phase complete"']
+cmds = ['echo "Python Flask app ready"']
 
 [start]
-cmd = 'cd backend && python app.py'
+cmd = 'python app.py'
