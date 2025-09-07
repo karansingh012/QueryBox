@@ -2,8 +2,8 @@ import axios from 'axios';
 
 // API configuration
 const API_BASE_URL = import.meta.env.PROD 
-  ? '/api'
-  : 'http://127.0.0.1:5002';
+  ? 'https://fantastic-enjoyment.up.railway.app'  // Railway backend
+  : 'http://127.0.0.1:5000';  // Local development
 
 // Create axios instance with default config
 const apiClient = axios.create({
