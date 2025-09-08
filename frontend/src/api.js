@@ -2,8 +2,8 @@ import axios from 'axios';
 
 // API configuration
 const API_BASE_URL = import.meta.env.PROD 
-  ? 'https://fantastic-enjoyment.up.railway.app'  // Railway backend
-  : 'http://127.0.0.1:5000';  // Local development
+  ? 'https://queryboxai-backend-production.up.railway.app'  // Railway backend
+  : 'http://127.0.0.1:5001';  // Local development
 
 // Create axios instance with default config
 const apiClient = axios.create({
